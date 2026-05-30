@@ -269,6 +269,10 @@ a {
   white-space: nowrap;
 }
 
+.social-map {
+  display: none;
+}
+
 .social-link span {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -671,19 +675,92 @@ address {
   }
 
   .hero-social {
-    left: 18px;
+    left: 50%;
     right: auto;
-    bottom: 22px;
-    gap: 12px;
-    padding-bottom: 54px;
-    font-size: 0.58rem;
-    letter-spacing: 0.16em;
+    bottom: 26px;
+    flex-direction: row;
+    gap: 22px;
+    padding-bottom: 0;
+    transform: translateX(-50%);
   }
 
   .social-line {
-    width: 1px;
-    min-width: 0;
-    height: 40px;
+    display: none;
+  }
+
+  .social-link {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-map {
+    display: inline-flex;
+  }
+
+  .social-link span {
+    display: none;
+  }
+
+  .social-link svg {
+    position: static;
+    width: 28px;
+    height: 28px;
+    transform: none;
+  }
+
+  .social-link:first-child svg,
+  .social-link:last-child svg {
+    bottom: auto;
+  }
+
+  .collections,
+  .collections.section-pad {
+    justify-items: center;
+    padding: 0 0 40px;
+  }
+
+  .collection-intro {
+    width: 100%;
+  }
+
+  .carousel {
+    width: min(100%, 560px);
+    margin-inline: auto;
+    justify-content: center;
+    padding: 0 32px;
+  }
+
+  .carousel-viewport {
+    flex: 0 1 520px;
+    max-width: min(100%, 520px);
+  }
+
+  .collection-intro,
+  .dress-card {
+    min-height: 116vw;
+  }
+
+  .dress-card {
+    flex: 0 0 100%;
+    min-height: min(132vw, 720px);
+    margin-right: 0;
+  }
+
+  .carousel-controls {
+    inset: 0 4px;
+    align-items: center;
+  }
+
+  .carousel-btn {
+    width: 24px;
+    height: 44px;
+    padding: 0;
+  }
+
+  .carousel-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.5;
   }
 
   .btn {
@@ -699,19 +776,6 @@ address {
   .about-image {
     min-height: 360px;
     height: 62vh;
-  }
-
-  .collection-intro,
-  .dress-card {
-    min-height: 116vw;
-  }
-
-  .dress-card {
-    flex-basis: 100%;
-  }
-
-  .carousel-controls {
-    inset: 0 8px;
   }
 
   .dreams-quote,
